@@ -1,0 +1,268 @@
+/* CSS Reset  */
+* {
+  margin: 0;
+  padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+/* CSS Variables  */
+:root {
+  --navbar-height: 59px;
+}
+
+/* Navigation Bar  */
+
+/* Navigation Bar : Logo and image */
+#logo {
+  margin: 15px 36px;
+}
+#logo img {
+  height: 66px;
+  margin: -9px 20px;
+}
+
+/* Navigation Bar : List styling */
+#navbar {
+  font-family: "Bitter", serif;
+  /* font-family: "Dancing Script", cursive;
+  font-family: "Glegoo", serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto Condensed", sans-serif; */
+  width: 98.8vw;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+}
+
+#navbar ul {
+  display: flex;
+}
+#navbar::before {
+  content: "";
+  background-color: black;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  z-index: -1;
+  opacity: 0.4;
+}
+#navbar ul li {
+  list-style: none;
+  font-size: 1.3rem;
+}
+#navbar ul li a {
+  display: block;
+  text-decoration: none;
+  padding: 3px 22px;
+  color: white;
+}
+#navbar ul li a:hover {
+  background-color: white;
+  border-radius: 20px;
+  color: black;
+}
+
+/* Home Section  */
+#home {
+  display: flex;
+  flex-direction: column;
+  padding: 3px 200px;
+  height: 688px;
+  justify-content: center;
+  align-items: center;
+}
+#home::before {
+  content: "";
+  background: url("../bg1.jpg") no-repeat center center/cover;
+  position: absolute;
+  height: 94%;
+  width: 100%;
+  top: 0px;
+  right: 0px;
+  z-index: -1;
+  opacity: 0.79;
+}
+
+#home h1 {
+  font-family: "Bitter", serif;
+  color: white;
+  text-align: center;
+}
+#home p {
+  font-family: "Bitter", serif;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Services Section  */
+#services{
+    margin: 6px;
+    display: flex;
+    margin-bottom: 50px;
+}
+#services .box{
+    border: solid red 2px;
+    padding: 4px 34px;
+    margin: 3px 42px;
+    border-radius: 28px;
+    background-color: #e8eff8;
+}
+#services .box img{
+    height: 160px;
+    display: block;
+    margin: auto;
+}
+#services .box p{
+  font-family: "Bitter", serif;
+}
+
+/* Client Section */
+.client-section{
+  height: 344px;
+  position: relative;
+}
+#client{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#client img{
+  height: 120px;
+}
+.client-item{
+  padding: 34px;
+}
+#client-section::before{
+  content: "";
+  position: absolute;
+  background: url('../bg3.jpg') no-repeat center center/cover;
+  width: 100%;
+  height: 39%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+/* Contact Section  */
+/* #contact{
+  position: relative;
+}
+#contact::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  background: url('../contact.jpg') no-repeat center center/cover;
+}
+#contact-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+#contact-box form{
+  width: 40%;
+}
+#contact-box label{
+  font-size: 1.2rem;
+  font-family: "Bitter", serif;
+} */
+
+/* trial 2 */
+#contact-box{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  padding: 5px 100px;
+}
+#contact-box::before{
+  content: "";
+  position: absolute;
+  background-color: rgb(177, 177, 240);
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+}
+#contact-box input,
+#contact-box textarea{
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+#contact-box form{
+  width: 70%;
+}
+#contact-box label{
+  font-size: 1.2rem;
+  font-family: "Bitter", serif;
+}
+footer{
+  background-color: black;
+  color: white;
+  padding: 9px 20px;
+}
+/* utility classes */
+.h-primary {
+  font-family: "Bitter", serif;
+  font-size: 3.8rem;
+  padding: 12px;
+}
+.h-secondary {
+  font-family: "Bitter", serif;
+  font-size: 2.0rem;
+  padding: 12px;
+}
+
+/* Button Styling  */
+.btn{
+    font-size: 20px;
+    background-color: rgb(144, 188, 222);
+    height: 40px;
+    width: 150px;
+    color: white;
+    margin: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 2px 2px 2px rgb(184, 140, 140); */
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+.btn::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    left: 0;
+    transition: all 0.6s;
+    transform: scaleX(0);
+    transform-origin: left;
+    z-index: -1;
+}
+.btn:hover::before{
+    transform: scaleX(1);
+}
+
+.center{
+ text-align: center;
+}
